@@ -15,7 +15,13 @@ The core of the aligner relies on dynamic programming to build a scoring matrix 
 
 The scoring matrix is populated using the following recurrence relation:
 
-$$F(i,j) = \max \begin{cases} F(i-1, j-1) + S(x_i, y_j) & \text{(Match/Mismatch)} \\ F(i, j-1) + d & \text{(Gap in Sequence 1)} \\ F(i-1, j) + d & \text{(Gap in Sequence 2)} \end{cases}$$
+$$
+F(i,j) = \max \begin{cases} 
+F(i-1, j-1) + S(x_i, y_j) & \text{(Match/Mismatch)} \\ 
+F(i, j-1) + d & \text{(Gap in Sequence 1)} \\ 
+F(i-1, j) + d & \text{(Gap in Sequence 2)} 
+\end{cases}
+$$
 
 Where $S$ is the substitution matrix score and $d$ is the linear gap penalty.
 
