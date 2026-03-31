@@ -40,7 +40,7 @@ cd DNA-Sequence-Alignment-Using-Needleman-Wunsch
 Run the aligner from the command line, passing in the file paths of your two FASTA files as arguments:
 
 ```python
-py align.py sequence1.fasta sequence2.fasta
+py align.py file_path\sequence1.fasta file_path\sequence2.fasta
 ```
 
 Example output code for `test_wildtype.fasta` and `test_mutated.fasta`, which are provided in the `test_files` folder:
@@ -52,4 +52,5 @@ optimal score: 9.0
 ```
 
 There are 11 matches, 1 mismatch, and 1 indel, so the optimal score is $11 - 2 = 9$
+In this example it appears that the mutated allele swaps G for A and has 1 deletion of A. 
 
